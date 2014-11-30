@@ -15,27 +15,28 @@ int main(void)
     }
 
     // store the first number, which will be used in the rest of the program
-    int num_pairs = NULL;
+    int num_pairs;
+
     fscanf(inFile, "%d", &num_pairs); 
 
     // create two arrays, one to hold number pairs and the second to hold
     // answers
-    int intArray[num_pairs * 2];
+    int intArray[(num_pairs * 2)];
+
     int arrayAnswers[num_pairs];
 
     // read in pairs from the file
-    int i = NULL;
+    int i;
     for (i = 0; i < num_pairs; i++)
     {
         fscanf(inFile, "%d %d", &intArray[i], &intArray[i + 1]);
     }
 
     // sum each pair
-    int j = NULL;
-    int k = NULL;
+    int j, k;
     for (j = 0, k = 0; j < num_pairs; j = j + 2, k++)
     {
-        int sum = NULL;
+        int sum;
         sum = intArray[j] + intArray[j+1];
         arrayAnswers[k] = sum;
     }
