@@ -1,0 +1,1 @@
+clang -ggdb -std=c99 -Wall -Werror program.c -lm -o program
